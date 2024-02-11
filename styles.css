@@ -15,6 +15,11 @@ html {
 }
   *, *:before, *:after {
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-size: 34px;
 }
 
 .contenedor{
@@ -29,14 +34,87 @@ html {
     display: flex;
     background-color: var(--Darkdesaturated);
     color: var(--Whitemainheadingstats);
-    max-width: 1140px;
-    border-radius: 25px;
+    max-width: 1100px;
+    max-height: 500px;
+    height: 100%;
+    border-radius: 15px;
+    font-family: var(--FontFamily);
 }
 .content-info{
-    padding: 60px;
+    padding: 0 60px;
+    flex: 1;
+    margin: auto 0;
+}
+.content-img{
+    flex: 1;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 15px 15px 0;
+   
+}
+.image-layer{
+    background-color: hsla(277, 100%, 25%, 0.616);
+    width: 100%;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    object-fit: cover;
+}
+.description{
+    margin: 30px 0;
+    color: var(--Slightlystatheadings);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.list{
+    color: var(--Slightlystatheadings);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.list-num{
+    font-family: var(--FontInter);
+    font-weight: 700;
+    font-size: 22px;
 }
 
 .content-stats{
     display: flex;
     justify-content: space-between;
+    margin-top: 80px;
 }
+ @media (max-width: 768px) {
+    .content{
+        display: flex;
+        margin: 0 20px;
+        flex-direction: column-reverse;
+        max-height: 800px;
+    }
+    .content-info{
+        padding: 30px;
+        flex: 1;
+        margin: auto 0;
+        text-align: center;
+    }
+    .content-stats{
+        display: inline;
+    }
+    .list-num{
+        margin-top: 15px;
+    }
+    h1{
+        font-size: 26px;
+    }
+    .content-img{
+        background-image: url(./images/image-header-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    .image-layer{
+        background-color: hsla(277, 100%, 25%, 0.616);
+        width: 100%;
+        height: 100%;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+    }
+ }
